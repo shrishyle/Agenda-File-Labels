@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      /* .attendee_name {
+        background-color: grey;
+      }
+
+      div.name,
+      div.title {
+        color: white;
+      } */
+
+      .page {
+        width: 21cm;
+        height: 30cm;
+        /* border: 2px solid greenyellow; */
+      }
+
+      .container {
+        margin-left: 1cm;
+        margin-right: 1cm;
+        margin-top: 1in;
+        margin-bottom: 1in;
+        /* overflow: hidden; */
+        /* border: 1px solid red; */
+      }
+
+      table,
+      td,
+      tr {
+        border: 1px solid grey;
+        border-collapse: collapse;
+      }
+
+      td {
+        padding: 1rem;
+        box-sizing: border-box;
+      }
+
+      td div {
+        font-family: "Tahoma", sans-serif;
+        letter-spacing: 0.6px;
+        text-align: center;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+      }
+
+      td div.name {
+        font-size: 20px;
+      }
+
+      td div.title {
+        font-size: 14px;
+        margin-top: 2px;
+      }
+
+      .detail_text {
+        height: 3.32cm;
+        padding: 0.5cm 1cm 0.5cm 1cm;
+      }
+
+      .detail_text > div {
+        font-size: 17px;
+      }
+      sup {
+        font-size: 10px;
+      }
+    </style>
+
+    <title>ACB Labels</title>
+  </head>
+  <body>
+    <template id="meeting_detail">
+      <tr class="meeting_detail_text">
+        <td class="detail_text">
+          <div>
+            Agenda for 108<sup>th</sup> Meeting of Audit Committee of Board on
+            15<sup>th</sup> June 2023
+          </div>
+        </td>
+        <td class="detail_text">
+          <div>
+            Agenda for 108<sup>th</sup> Meeting of Audit Committee of Board on
+            15<sup>th</sup> June 2023
+          </div>
+        </td>
+      </tr>
+    </template>
+    <div class="page">
+      <div class="container">
+        <table>
+          <tbody>
+            <!-- ----------Names which change regularly---------- -->
+            <tr class="attendee_name">
+              <td>
+                <div class="name">Ms. Manimekhalai</div>
+                <div class="title"></div>
+              </td>
+              <td>
+                <div class="name">Shri T Sivakumar</div>
+                <div class="title"></div>
+              </td>
+            </tr>
+            <tr class="attendee_name">
+              <td>
+                <div class="name">Shri Priya Bhushan Sharma</div>
+                <div class="title"></div>
+              </td>
+              <td>
+                <div class="name">Ms. Vinita Kumari</div>
+                <div class="title"></div>
+              </td>
+            </tr>
+
+            <tr class="attendee_name">
+              <td>
+                <div class="name"></div>
+                <div class="title"></div>
+              </td>
+              <td>
+                <div class="name"></div>
+                <div class="title"></div>
+              </td>
+            </tr>
+            <tr class="attendee_name">
+              <td>
+                <div class="name"></div>
+                <div class="title"></div>
+              </td>
+              <td>
+                <div class="name"></div>
+                <div class="title"></div>
+              </td>
+            </tr>
+            <tr class="attendee_name">
+              <td>
+                <div class="name"></div>
+                <div class="title"></div>
+              </td>
+              <td>
+                <div class="name"></div>
+                <div class="title"></div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="page">
+      <div class="container">
+        <table>
+          <!-- ----------Names which DO NOT change regularly-------------- -->
+          <tbody>
+            <tr class="attendee_name">
+              <td>
+                <div class="name">Smt. Madhulika Bhaskar</div>
+                <div class="title"></div>
+              </td>
+              <td>
+                <div class="name"></div>
+                <div class="title"></div>
+              </td>
+            </tr>
+            <tr class="attendee_name">
+              <td>
+                <div class="name">General Manager</div>
+                <div class="title">Internal Audit Department</div>
+              </td>
+              <td>
+                <div class="name">Deputy General Manager</div>
+                <div class="title">Internal Audit Department</div>
+              </td>
+            </tr>
+            <tr class="attendee_name">
+              <td>
+                <div class="name">Assistant General Manager</div>
+                <div class="title"><span>Internal Audit Department</span></div>
+              </td>
+              <td>
+                <div class="name">Internal Audit Department</div>
+                <div class="title"></div>
+              </td>
+            </tr>
+            <tr class="attendee_name">
+              <td>
+                <div class="name">Shri Sateesh Kumar</div>
+                <div class="title"></div>
+              </td>
+              <td>
+                <div class="name">Shri. Devesh Srivastava</div>
+                <div class="title"></div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script>
+      function createMeetingDetailRow() {
+        let template = document.getElementById("meeting_detail");
+        let tempElement = template.content.cloneNode(true).children[0];
+        return tempElement;
+      }
+
+      let rows = document.querySelectorAll(".attendee_name");
+      for (let i = 0; i < rows.length; i++) {
+        let newRow = createMeetingDetailRow();
+        rows[i].parentElement.insertBefore(newRow, rows[i].nextElementSibling);
+      }
+    </script>
+  </body>
+</html>
