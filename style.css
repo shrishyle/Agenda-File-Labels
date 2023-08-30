@@ -59,6 +59,12 @@ td div.title {
 .detail_text > div {
   font-size: 17px;
 }
+
 sup {
   font-size: 10px;
+}
+
+sup.one,
+sup.two {
+  margin-left: -5.5px;
 }
