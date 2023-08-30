@@ -4,72 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style>
-      /* .attendee_name {
-        background-color: grey;
-      }
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
 
-      div.name,
-      div.title {
-        color: white;
-      } */
-
-      .page {
-        width: 21cm;
-        height: 30cm;
-        /* border: 2px solid greenyellow; */
-      }
-
-      .container {
-        margin-left: 1cm;
-        margin-right: 1cm;
-        margin-top: 1in;
-        margin-bottom: 1in;
-        /* overflow: hidden; */
-        /* border: 1px solid red; */
-      }
-
-      table,
-      td,
-      tr {
-        border: 1px solid grey;
-        border-collapse: collapse;
-      }
-
-      td {
-        padding: 1rem;
-        box-sizing: border-box;
-      }
-
-      td div {
-        font-family: "Tahoma", sans-serif;
-        letter-spacing: 0.6px;
-        text-align: center;
-        font-weight: bold;
-        letter-spacing: 0.5px;
-      }
-
-      td div.name {
-        font-size: 20px;
-      }
-
-      td div.title {
-        font-size: 14px;
-        margin-top: 2px;
-      }
-
-      .detail_text {
-        height: 3.32cm;
-        padding: 0.5cm 1cm 0.5cm 1cm;
-      }
-
-      .detail_text > div {
-        font-size: 17px;
-      }
-      sup {
-        font-size: 10px;
-      }
-    </style>
+    <style></style>
 
     <title>ACB Labels</title>
   </head>
@@ -78,8 +20,12 @@
       <tr class="meeting_detail_text">
         <td class="detail_text">
           <div>
-            Agenda for 108<sup>th</sup> Meeting of Audit Committee of Board on
-            15<sup>th</sup> June 2023
+            <span class="one">Agenda for 108</span>
+            <sup>th</sup>
+            <span class="two"> Meeting of Audit Committee of Board on </span>
+            <span class="three">15</span>
+            <sup>th</sup>
+            <span class="fourth"> June 2023 </span>
           </div>
         </td>
         <td class="detail_text">
@@ -199,18 +145,10 @@
         </table>
       </div>
     </div>
-    <script>
-      function createMeetingDetailRow() {
-        let template = document.getElementById("meeting_detail");
-        let tempElement = template.content.cloneNode(true).children[0];
-        return tempElement;
-      }
+    <!-- Custom Javascript -->
+    <script src="script.js"></script>
 
-      let rows = document.querySelectorAll(".attendee_name");
-      for (let i = 0; i < rows.length; i++) {
-        let newRow = createMeetingDetailRow();
-        rows[i].parentElement.insertBefore(newRow, rows[i].nextElementSibling);
-      }
-    </script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   </body>
 </html>
