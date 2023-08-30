@@ -64,7 +64,7 @@ sup {
   font-size: 10px;
 }
 
-sup.one,
-sup.two {
+#three,
+#six {
   margin-left: -5.5px;
 }
