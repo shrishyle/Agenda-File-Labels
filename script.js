@@ -88,6 +88,15 @@ let dataClass = class {
 
     //Method to get the Super Text for numbers.
     this.getSupText = (inputText) => {
+      if (inputText[inputText.length - 1] === "1" && inputText[inputText.length - 2] === "1") {
+        return "th";
+      }
+      if (inputText[inputText.length - 1] === "2" && inputText[inputText.length - 2] === "1") {
+        return "th";
+      }
+      if (inputText[inputText.length - 1] === "3" && inputText[inputText.length - 2] === "1") {
+        return "th";
+      }
       if (inputText[inputText.length - 1] === "1") {
         return "st";
       }
