@@ -22,12 +22,36 @@ const database = class {
 };
 
 let dbObject = [
-  { name: "Shri. Sateesh Kumar", title: "", status: "variable" },
-  { name: "Shri. Devesh Srivastava", title: "", status: "variable" },
-  { name: "Internal Audit Department", title: "", status: "fixed" },
-  { name: "Assistant General Manager", title: "Internal Audit Department", status: "fixed" },
-  { name: "Deputy General Manager", title: "Internal Audit Department", status: "fixed" },
-  { name: "General Manager", title: "Internal Audit Department", status: "fixed" },
+  {
+    name: "Shri. Sateesh Kumar",
+    title: "",
+    status: "variable",
+  },
+  {
+    name: "Shri. Devesh Srivastava",
+    title: "",
+    status: "variable",
+  },
+  {
+    name: "Internal Audit Department",
+    title: "",
+    status: "fixed",
+  },
+  {
+    name: "Assistant General Manager",
+    title: "Internal Audit Department",
+    status: "fixed",
+  },
+  {
+    name: "Deputy General Manager",
+    title: "Internal Audit Department",
+    status: "fixed",
+  },
+  {
+    name: "General Manager",
+    title: "Internal Audit Department",
+    status: "fixed",
+  },
 ];
 
 let recipientList = new database("db2", "directorDB", dbObject);
@@ -91,29 +115,64 @@ let dataClass = class {
         let meetingDate = meetingDateInputElem.value;
         this.meetingInfo.meetingNumber = meetingNo;
         this.meetingInfo.meetingDate = new Date(meetingDate);
-        this.renderMeetingDetailsRows(this.injectMeetingInformation());
+        this.renderMeetingDetailsRows(this.createMeetingInfoRow());
         this.renderDirectorNamesInLabels();
       });
     };
 
     //Method to inject Meeting Info into template
     this.injectMeetingInformation = () => {
-      let template = document.getElementById("meeting_detail");
-      let tempElement = template.content.cloneNode(true).children[0];
-      //Select the relavant Elements in Document Fragment.
-      let two = tempElement.querySelector("span#two");
-      let three = tempElement.querySelector("span#three");
-      let five = tempElement.querySelector("span#five");
-      let six = tempElement.querySelector("span#six");
-      let seven = tempElement.querySelector("span#seven");
-      //Inject details in the relavant elements in Doc Fragment.
-      two.textContent = this.meetingInfo.meetingNumber;
+      // let template = document.getElementById("meeting_detail");
+      // let tempElement = template.content.cloneNode(true).children[0];
+      // // Select the relavant Elements in Document Fragment.
+      // let two = tempElement.querySelector("span#two");
+      // let three = tempElement.querySelector("span#three");
+      // let five = tempElement.querySelector("span#five");
+      // let six = tempElement.querySelector("span#six");
+      // let seven = tempElement.querySelector("span#seven");
+      // // Inject details in the relavant elements in Doc Fragment.
+      // two.textContent = this.meetingInfo.meetingNumber;
+      // let mNum = this.meetingInfo.meetingNumber.toString();
+      // three.textContent = this.getSupText(mNum);
+      // five.textContent = this.meetingInfo.meetingDate.toLocaleDateString("en-US", {
+      //   day: "numeric",
+      // });
+      // six.textContent = this.getSupText(this.meetingInfo.meetingDate.toLocaleDateString("en-US", { day: "numeric" }));
+      // seven.textContent = ` ${this.meetingInfo.meetingDate.toLocaleDateString("en-US", {
+      //   day: "numeric",
+      // })}`;
+      // return tempElement;
+    };
+
+    //Method to create Meeting information row.
+    this.createMeetingInfoRow = () => {
+      let tr = document.createElement("tr");
+      let td1 = document.createElement("td");
+      let td2 = document.createElement("td");
+      let div1 = document.createElement("div");
+      let div2 = document.createElement("div");
+
       let mNum = this.meetingInfo.meetingNumber.toString();
-      three.textContent = this.getSupText(mNum);
-      five.textContent = this.meetingInfo.meetingDate.toLocaleDateString("en-US", { day: "numeric" });
-      six.textContent = this.getSupText(this.meetingInfo.meetingDate.toLocaleDateString("en-US", { day: "numeric" }));
-      seven.textContent = ` ${this.meetingInfo.meetingDate.toLocaleDateString("en-US", { year: "numeric", month: "short" })}`;
-      return tempElement;
+      let sup1 = `${this.getSupText(mNum).toString()}`;
+      let meetingDate = `${this.meetingInfo.meetingDate.toLocaleDateString("en-US", { day: "numeric" })}`;
+      let sup2 = `${this.getSupText(this.meetingInfo.meetingDate.toLocaleDateString("en-US", { day: "numeric" }).toString())}`;
+      let monthYear = `${this.meetingInfo.meetingDate.toLocaleDateString("en-US", { month: "short", year: "numeric" })}`;
+
+      let meetingDetailText = `Agenda for ${mNum}${sup1.sup()} Meeting of 
+      Audit Committee of Board on
+      ${meetingDate}${sup2.sup()} ${monthYear} `;
+
+      div1.innerHTML = meetingDetailText;
+      td1.appendChild(div1);
+      td1.setAttribute("class", "meeting-detail");
+      tr.appendChild(td1);
+
+      div2.innerHTML = meetingDetailText;
+      td2.appendChild(div2);
+      td2.setAttribute("class", "meeting-detail");
+      tr.appendChild(td2);
+
+      return tr;
     };
 
     //Method to get the Super Text for numbers.
@@ -142,15 +201,10 @@ let dataClass = class {
 
     //Function render Meeting Details Rows
     this.renderMeetingDetailsRows = (temp) => {
-      // console.log("Line No. - 114", "temp - ", temp);
-      let clone = temp.cloneNode(true);
       let rows = document.querySelectorAll(".attendee_name");
-      let tr = document.createElement("tr");
-      tr.appendChild(temp);
-      tr.appendChild(clone);
       for (let i = 0; i < rows.length; i++) {
-        let tr_clone = tr.cloneNode(true);
-        rows[i].insertAdjacentElement("afterend", tr_clone);
+        let clone = temp.cloneNode(true);
+        rows[i].insertAdjacentElement("afterend", clone);
       }
     };
 

@@ -4,7 +4,7 @@
   "editor.minimap.maxColumn": 50,
   "editor.bracketPairColorization.enabled": true,
   "editor.formatOnSave": true,
-  "prettier.printWidth": 200,
+  "prettier.printWidth": 750,
   "workbench.colorCustomizations": {
     "activityBar.activeBackground": "#4d8d84",
     "activityBar.background": "#4d8d84",

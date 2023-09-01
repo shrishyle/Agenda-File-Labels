@@ -10,16 +10,11 @@
 .page {
   width: 21cm;
   height: 30cm;
-  /* border: 2px solid greenyellow; */
 }
 
 .container {
-  margin-left: 1cm;
-  margin-right: 1cm;
-  margin-top: 1in;
-  margin-bottom: 1in;
+  margin: 1in 1cm;
   overflow: hidden;
-  /* border: 1px solid red; */
 }
 
 table,
@@ -30,41 +25,28 @@ tr {
 }
 
 td {
-  padding: 1rem;
   box-sizing: border-box;
-}
-
-td div {
+  font-size: 16px;
   font-family: "Tahoma", sans-serif;
-  letter-spacing: 0.6px;
   text-align: center;
   font-weight: bold;
   letter-spacing: 0.5px;
+  width: 250px;
 }
 
-td div.name {
+div.name {
   font-size: 20px;
 }
 
-td div.title {
+div.title {
   font-size: 14px;
-  margin-top: 2px5;
+  margin-top: 2px;
 }
 
-.detail_text {
-  height: 3.32cm;
-  padding: 0.5cm 0.8cm 0.5cm 0.8cm;
+.meeting-detail {
+  padding: 1.9rem;
 }
 
-.detail_text > div {
-  font-size: 17px;
-}
-
-sup {
-  font-size: 10px;
-}
-
-#three,
-#six {
-  margin-left: -5.5px;
+td:not(.meeting-detail) {
+  padding: 1.25rem 1.8rem;
 }
