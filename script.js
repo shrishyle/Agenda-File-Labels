@@ -140,14 +140,6 @@ let dataClass = class {
       }
     };
 
-    //Method to Create Meeting Detail Row
-    // this.createMeetingDetailRow = () => {
-    //   let template = document.getElementById("detail_text");
-    //   let tempElement = template.content.cloneNode(true).children[0];
-    //   console.log(tempElement);
-    //   return tempElement;
-    // };
-
     //Function render Meeting Details Rows
     this.renderMeetingDetailsRows = (temp) => {
       // console.log("Line No. - 114", "temp - ", temp);
