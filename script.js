@@ -120,30 +120,6 @@ let dataClass = class {
       });
     };
 
-    //Method to inject Meeting Info into template
-    this.injectMeetingInformation = () => {
-      // let template = document.getElementById("meeting_detail");
-      // let tempElement = template.content.cloneNode(true).children[0];
-      // // Select the relavant Elements in Document Fragment.
-      // let two = tempElement.querySelector("span#two");
-      // let three = tempElement.querySelector("span#three");
-      // let five = tempElement.querySelector("span#five");
-      // let six = tempElement.querySelector("span#six");
-      // let seven = tempElement.querySelector("span#seven");
-      // // Inject details in the relavant elements in Doc Fragment.
-      // two.textContent = this.meetingInfo.meetingNumber;
-      // let mNum = this.meetingInfo.meetingNumber.toString();
-      // three.textContent = this.getSupText(mNum);
-      // five.textContent = this.meetingInfo.meetingDate.toLocaleDateString("en-US", {
-      //   day: "numeric",
-      // });
-      // six.textContent = this.getSupText(this.meetingInfo.meetingDate.toLocaleDateString("en-US", { day: "numeric" }));
-      // seven.textContent = ` ${this.meetingInfo.meetingDate.toLocaleDateString("en-US", {
-      //   day: "numeric",
-      // })}`;
-      // return tempElement;
-    };
-
     //Method to create Meeting information row.
     this.createMeetingInfoRow = () => {
       let tr = document.createElement("tr");

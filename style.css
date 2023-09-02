@@ -36,17 +36,25 @@ td {
 
 div.name {
   font-size: 20px;
+  padding: 0;
+  width: auto !important;
 }
 
 div.title {
   font-size: 14px;
   margin-top: 2px;
+  padding: 0;
+  width: auto !important;
 }
 
-.meeting-detail {
+/* .meeting-detail {
   padding: 1.9rem;
 }
 
 td:not(.meeting-detail) {
   padding: 1.25rem 1.8rem;
+} */
+
+.name-title-container {
+  padding: 0.5rem 1 rem !important;
 }
