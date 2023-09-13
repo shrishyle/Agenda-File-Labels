@@ -15,21 +15,30 @@
   <body>
     <template id="meeting-detail-component-template">
       <div id="meeting-detail-component">
-        <div class="top">Enter Upcoming Meeting Details</div>
+        <div class="top">
+          <span class="material-symbols-outlined icon"> groups </span>
+          <span>Enter Upcoming Meeting Details</span>
+        </div>
         <div class="bottom">
           <div class="left">
-            <label for="meeting-number">Meeting No:</label>
+            <label for="meeting-number">
+              <span class="material-symbols-outlined icon-small icon-2 "> pin </span>
+              Meeting No:
+            </label>
             <input type="text" id="meeting-number" />
           </div>
 
           <div class="center">
-            <label for="meeting-date">Meeting Date:</label>
+            <label for="meeting-date">
+              <span class="material-symbols-outlined icon-2 icon-small"> event_note </span>
+              <span class="label-text-1">Meeting Date:</span>
+            </label>
             <input type="date" id="meeting-date" />
           </div>
           <div class="right">
             <button>
-              Next
-              <span class="material-symbols-outlined"> send </span>
+              <span class="text" id="next-button">Next</span>
+              <span class="material-symbols-outlined icon-3"> send </span>
             </button>
           </div>
         </div>

@@ -8,11 +8,7 @@
   font-family: "Roboto Flex", sans-serif;
 }
 
-.button1 {
-}
-
-.button2 {
-}
+/* Component No. 1 */
 
 body {
   margin: 0;
@@ -22,6 +18,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #768289;
 }
 
 #meeting-detail-component {
@@ -43,7 +40,7 @@ body {
   border-top-right-radius: 12px;
   border-top-left-radius: 12px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   font-weight: 600;
@@ -78,6 +75,7 @@ body {
 .bottom > div > label {
   color: var(--font-color);
   margin-bottom: 3px;
+  position: relative;
 }
 
 .bottom > div > input {
@@ -85,8 +83,10 @@ body {
   height: 25px;
   outline: none;
   border: none;
-  padding: 3px;
-  border-radius: 12px;
+  padding: 3px 5px 3px 8px;
+  border-radius: 8px;
+  font-family: "Roboto Flex", sans-serif;
+  font-size: 14px;
 }
 
 .bottom > div > button {
@@ -99,6 +99,7 @@ body {
   background-color: var(--lightblue);
   color: white;
   font-weight: 500;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.15);
 }
 
 .bottom > div > button > span {
@@ -116,3 +117,63 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+/* Component No. 2 */
+
+.icon {
+  margin-right: 12px;
+}
+
+.icon-2 {
+  position: absolute;
+  left: -23px;
+  top: -2px;
+}
+
+.label-text-1 {
+  margin-bottom: 5px;
+}
+
+button {
+  cursor: pointer;
+  position: relative;
+}
+
+.icon-small {
+  font-size: 20px;
+}
+
+.icon-3 {
+  position: absolute;
+  bottom: 5px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+button > span.text {
+  font-family: "Roboto Flex", sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 0.25px;
+}
+
+#toast-component {
+  width: 250px;
+  max-width: 250px;
+  min-width: 100px;
+  /* height: 45px;
+  min-height: 40px;
+  max-height: 65px; */
+  color: white;
+  padding: 9px 25px;
+  border-radius: 10px;
+  margin: 4px;
+  background-color: var(--lightblue);
+  position: relative;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+/* #toast-container {
+  background-color: aliceblue;
+  width: ;
+} */
