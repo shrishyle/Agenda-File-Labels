@@ -32,26 +32,26 @@ let dbObject = [
     title: "",
     status: "variable",
   },
-  {
-    name: "Internal Audit Department",
-    title: "",
-    status: "fixed",
-  },
-  {
-    name: "Assistant General Manager",
-    title: "Internal Audit Department",
-    status: "fixed",
-  },
-  {
-    name: "Deputy General Manager",
-    title: "Internal Audit Department",
-    status: "fixed",
-  },
-  {
-    name: "General Manager",
-    title: "Internal Audit Department",
-    status: "fixed",
-  },
+  // {
+  //   name: "Internal Audit Department",
+  //   title: "",
+  //   status: "fixed",
+  // },
+  // {
+  //   name: "Assistant General Manager",
+  //   title: "Internal Audit Department",
+  //   status: "fixed",
+  // },
+  // {
+  //   name: "Deputy General Manager",
+  //   title: "Internal Audit Department",
+  //   status: "fixed",
+  // },
+  // {
+  //   name: "General Manager",
+  //   title: "Internal Audit Department",
+  //   status: "fixed",
+  // },
 ];
 
 let recipientList = new database("db2", "directorDB", dbObject);

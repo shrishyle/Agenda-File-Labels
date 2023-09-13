@@ -1,0 +1,118 @@
+:root {
+  --greyblue: rgb(177, 198, 200);
+  --skyblue: #eaf7ff;
+  --lightblue: #4ec0ff;
+  --font-color: #768289;
+  font-family: "Inter", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Flex", sans-serif;
+}
+
+.button1 {
+}
+
+.button2 {
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#meeting-detail-component {
+  height: 2rem;
+  width: 650px;
+  min-width: 500px;
+  max-width: 700px;
+  height: 150px;
+  min-height: 100px;
+  max-height: 200px;
+  border-radius: 12px;
+  box-shadow: 2px 5px 8px rgba(0, 0, 0, 0.15);
+}
+
+#meeting-detail-component > div:nth-child(1) {
+  height: 30%;
+  width: 100%;
+  background-color: var(--greyblue);
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  color: white;
+  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.25);
+}
+
+#meeting-detail-component > div:nth-child(2) {
+  height: 70%;
+  width: 100%;
+  background-color: var(--skyblue);
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom > div {
+  width: 33%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom > div > label {
+  color: var(--font-color);
+  margin-bottom: 3px;
+}
+
+.bottom > div > input {
+  width: 60%;
+  height: 25px;
+  outline: none;
+  border: none;
+  padding: 3px;
+  border-radius: 12px;
+}
+
+.bottom > div > button {
+  width: 75%;
+  height: 35px;
+  outline: none;
+  border: none;
+  padding: 6px;
+  border-radius: 12px;
+  background-color: var(--lightblue);
+  color: white;
+  font-weight: 500;
+}
+
+.bottom > div > button > span {
+  color: white;
+  font-weight: 200;
+  margin-right: 5px;
+}
+
+#container {
+  height: 100vh;
+  max-width: 60%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

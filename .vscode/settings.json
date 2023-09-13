@@ -25,7 +25,7 @@
     "titleBar.inactiveForeground": "#e7e7e799"
   },
   "peacock.color": "#3b6c65",
-  "html.format.wrapLineLength": 250,
+  "html.format.wrapLineLength": 750,
   "diffEditor.wordWrap": "off",
   "editor.wordWrap": "off"
 }
