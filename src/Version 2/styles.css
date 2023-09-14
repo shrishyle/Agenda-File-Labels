@@ -87,6 +87,7 @@ body {
   border-radius: 8px;
   font-family: "Roboto Flex", sans-serif;
   font-size: 14px;
+  border: 1px dotted var(--font-color);
 }
 
 .bottom > div > button {
@@ -177,3 +178,9 @@ button > span.text {
   background-color: aliceblue;
   width: ;
 } */
+
+.sub-container {
+  width: 100%;
+  height: auto;
+  background-color: var(--skyblue);
+}
