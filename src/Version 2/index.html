@@ -20,24 +20,24 @@
           <span>Enter Upcoming Meeting Details</span>
         </div>
         <div class="bottom">
-          <div class="left">
+          <div class="left view-1">
             <label for="meeting-number">
-              <span class="material-symbols-outlined icon-small icon-2 "> pin </span>
+              <span class="material-symbols-outlined icon-small icon-2"> pin </span>
               Meeting No:
             </label>
             <input type="text" id="meeting-number" />
           </div>
 
-          <div class="center">
+          <div class="center view-1">
             <label for="meeting-date">
               <span class="material-symbols-outlined icon-2 icon-small"> event_note </span>
               <span class="label-text-1">Meeting Date:</span>
             </label>
             <input type="date" id="meeting-date" />
           </div>
-          <div class="right">
-            <button>
-              <span class="text" id="next-button">Next</span>
+          <div class="right view-1">
+            <button id="next-button">
+              <span class="text">Next</span>
               <span class="material-symbols-outlined icon-3"> send </span>
             </button>
           </div>
@@ -45,15 +45,40 @@
       </div>
     </template>
 
-    <template id="toast-container-template">
-      <div id="toast-container"></div>
-    </template>
-
     <template id="toast-component-template">
       <div id="toast-component">
+        <span class="material-symbols-outlined"> person </span>
         <span id="toast-text"></span>
         <span class="material-symbols-outlined"> done </span>
         <span class="material-symbols-outlined"> close </span>
+      </div>
+    </template>
+
+    <template id="second-component-template">
+      <div id="second-component">
+        <div id="container-for-toast-container">
+          <div class="toast-container"></div>
+          <div class="toast-container"></div>
+        </div>
+        <div id="button-container">
+          <button class="back" id="back-button">
+            <span class="material-symbols-outlined"> arrow_left_alt </span>
+            Back
+          </button>
+          <button class="next" id="next-button-2">
+            Next
+            <span class="material-symbols-outlined"> east </span>
+          </button>
+        </div>
+      </div>
+    </template>
+
+    <template id="next-button-template">
+      <div class="right view-1">
+        <button id="next-button">
+          <span class="text">Next</span>
+          <span class="material-symbols-outlined icon-3"> send </span>
+        </button>
       </div>
     </template>
 
